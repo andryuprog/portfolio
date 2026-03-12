@@ -1,111 +1,118 @@
-/* Общие настройки */
 html, body {
   margin: 0;
   padding: 0;
   background-color: #0d1117;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #f0f6fc;
 }
 
-/* Фиксированная ширина контейнера */
+/* Фиксированный контейнер по центру */
 .container {
-  max-width: 900px; /* Оптимально для десктопа */
+  max-width: 850px; 
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0 20px 50px 20px;
   box-sizing: border-box;
 }
 
 /* Компактный баннер */
 .banner {
   width: 100%;
-  height: 200px; /* Ограничиваем высоту */
-  object-fit: cover; /* Картинка заполняет область без искажений */
-  border-radius: 12px;
-  margin-bottom: 1rem;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0 0 12px 12px;
+  display: block;
 }
 
 .nav {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 15px;
+  margin: 20px 0;
 }
 
 .nav a {
-  padding: 0.4rem 0.8rem;
-  background-color: #161b22;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #f0f6fc;
-  font-size: 0.9rem;
-  transition: 0.3s;
-}
-
-.nav a:hover { background-color: #238636; }
-
-h1 { font-size: 1.8rem; color: #58a6ff; text-align: center; margin: 0.5rem 0; }
-h2 { font-size: 1.3rem; color: #c792ea; border-bottom: 1px solid #30363d; padding-bottom: 5px; }
-
-/* Компактные карточки */
-.card {
-  background-color: #161b22;
+  padding: 6px 12px;
+  background: #161b22;
   border: 1px solid #30363d;
-  border-radius: 10px;
-  margin: 15px 0;
-  padding: 15px;
-  cursor: pointer;
-  transition: 0.2s;
+  border-radius: 6px;
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
 }
 
-.card:hover { border-color: #58a6ff; }
+h1 { text-align: center; font-size: 26px; margin: 15px 0; color: #58a6ff; }
+h2 { color: #c792ea; font-size: 20px; margin-top: 35px; border-bottom: 1px solid #30363d; padding-bottom: 8px; }
 
-.card h3 { margin: 0; font-size: 1.1rem; color: #58a6ff; }
+/* Карточка на всю ширину КОНТЕЙНЕРА */
+.card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
 
-/* Контент внутри (Flexbox) */
+.card:hover {
+  border-color: #58a6ff;
+}
+
+.card h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+}
+
+/* Содержимое: видео слева, текст справа */
 .project-content {
-  display: none;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  display: none; /* Скрыто до клика, переключается на flex */
+  gap: 25px;
   align-items: flex-start;
 }
 
 .project-left {
-  flex: 0 0 220px; /* Еще чуть компактнее видео */
+  flex: 0 0 220px; /* Ширина мобильного превью */
 }
 
 .project-left video {
   width: 100%;
-  border-radius: 10px;
-  max-height: 400px;
-  background: #000;
+  border-radius: 12px;
+  border: 1px solid #30363d;
+  display: block;
 }
 
 .project-right {
   flex: 1;
-  font-size: 0.95rem;
+}
+
+.project-right p {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .button {
   display: inline-block;
   background-color: #238636;
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.85rem;
+  font-size: 14px;
   margin-top: 10px;
 }
 
-.footer {
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 0.8rem;
-  color: #8b949e;
-}
-
-/* Мобильная версия */
-@media (max-width: 600px) {
-  .project-content { flex-direction: column; align-items: center; }
-  .banner { height: 120px; }
+/* Для мобильных устройств */
+@media (max-width: 650px) {
+  .project-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-left {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 250px;
+  }
 }
