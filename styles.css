@@ -44,6 +44,17 @@ body {
       gap: 1rem;
       margin-bottom: 2rem;
     }
+
+    .card video {
+      width: 100%;       /* подстраивается под ширину карточки */
+      max-width: 600px;  /* максимальная ширина */
+      height: auto;      /* сохраняем пропорции */
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+
+
+
     .nav a {
       padding: 0.5rem 1rem;
       background-color: #161b22;
