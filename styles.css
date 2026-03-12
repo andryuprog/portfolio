@@ -45,12 +45,10 @@ body {
       margin-bottom: 2rem;
     }
 
-    .card video {
-      width: 100%;       /* подстраивается под ширину карточки */
-      max-width: 600px;  /* максимальная ширина */
-      height: auto;      /* сохраняем пропорции */
-      border-radius: 12px;
-      margin-top: 10px;
+    .card div[id^="project"] {
+      max-height: 60vh;      /* максимум 60% высоты экрана */
+      overflow-y: auto;       /* вертикальная прокрутка внутри блока */
+      padding: 10px 0;        /* немного отступов */
     }
 
 
