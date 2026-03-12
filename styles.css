@@ -92,6 +92,7 @@ p { font-size: 1.1rem; }
   background-color: #0d1117;
   gap: 25px;
   align-items: flex-start;
+  flex-direction: row;
 }
 
 .accordion-item.active .accordion-content {
@@ -105,14 +106,18 @@ p { font-size: 1.1rem; }
 
 /* Видео-телефон слева */
 .video-side {
-  flex: 0 0 250px;
+  flex: 0 0 auto;
+  width: 280px;
+  max-width: 100%;
 }
 
 .video-side video {
   width: 100%;
   height: auto;
+  aspect-ratio: 9 / 16;
   display: block;
   border-radius: 10px;
+  background: #000;
 }
 
 /* Текст справа */
@@ -139,6 +144,10 @@ p { font-size: 1.1rem; }
   }
   .video-side {
     flex: none;
-    width: 250px;
+    width: 100%;
+    max-width: 300px;
+  }
+  .text-side {
+    width: 100%;
   }
 }
