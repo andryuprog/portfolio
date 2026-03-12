@@ -8,8 +8,12 @@
   <script>
     function toggle(id) {
       const el = document.getElementById(id);
-      // Важно: переключаем именно на flex для колонок
-      el.style.display = (el.style.display === "flex") ? "none" : "flex";
+      // Проверяем текущее состояние. Если скрыто или пусто — ставим flex
+      if (el.style.display === "none" || el.style.display === "") {
+        el.style.display = "flex";
+      } else {
+        el.style.display = "none";
+      }
     }
   </script>
 </head>
@@ -25,6 +29,17 @@
   </nav>
 
   <h1>Flutter Mobile Developer</h1>
+  <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+    Mobile developer focused on building cross-platform applications with Flutter. 
+    Experience with modern architectures, Firebase, and clean UI.
+  </p>
+
+  <h2>Tech Stack</h2>
+  <ul>
+    <li>Flutter / Dart (Riverpod, BLoC)</li>
+    <li>Firebase (Push, Remote Config)</li>
+    <li>REST API & Clean Architecture</li>
+  </ul>
 
   <h2>Projects</h2>
 
@@ -37,7 +52,7 @@
         </video>
       </div>
       <div class="project-right">
-        <p>Mobile application for calculating position size and stop-loss based on ATR volatility.</p>
+        <p>Mobile application for calculating position size and stop-loss based on ATR volatility. Designed for traders who want to manage risk efficiently.</p>
         <p><strong>Stack:</strong> Flutter, Riverpod, Firebase</p>
         <a href="https://github.com/andryuprog" class="button" onclick="event.stopPropagation()">View on GitHub</a>
       </div>
@@ -53,12 +68,16 @@
         </video>
       </div>
       <div class="project-right">
-        <p>Application for tracking cryptocurrency portfolio and market statistics.</p>
+        <p>Application for tracking cryptocurrency portfolio and market statistics. Includes asset monitoring and simplified analytics.</p>
         <p><strong>Stack:</strong> Flutter, REST API, Firebase</p>
         <a href="https://github.com/andryuprog" class="button" onclick="event.stopPropagation()">View on GitHub</a>
       </div>
     </div>
   </div>
+
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:support@programingstudio.com" style="color: #58a6ff;">support@programingstudio.com</a></p>
+  <p>Telegram: <a href="https://t.me/andryuprog" style="color: #58a6ff;">@andryuprog</a></p>
 
   <div class="footer">
     © 2026 Flutter Developer Portfolio
