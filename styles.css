@@ -6,8 +6,6 @@ html, body {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #0d1117;
   color: #f0f6fc;
@@ -18,32 +16,29 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  text-align: left;
-}
-
-.logo {
-  max-width: 200px;
-  display: block;
-  margin: 0 auto 1.5rem;
 }
 
 .banner {
   width: 100%;
-  max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto 1.5rem;
   border-radius: 12px;
 }
 
+/* Навигация во всю ширину баннера */
 .nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
+
 .nav a {
-  padding: 0.5rem 1rem;
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem 0;
   background-color: #161b22;
   border-radius: 8px;
   text-decoration: none;
@@ -51,61 +46,61 @@ body {
   font-weight: bold;
   transition: background-color 0.3s, transform 0.2s;
 }
+
 .nav a:hover {
   background-color: #238636;
   transform: translateY(-2px);
 }
 
-h1 {
-  font-size: 2rem;
+h1 { font-size: 2rem; color: #58a6ff; text-align: center; }
+h2 { color: #c792ea; margin-top: 2rem; }
+
+/* Стили карточек-аккордеонов */
+.accordion-item {
   margin-bottom: 1rem;
-  color: #58a6ff;
-  text-align: center;
-}
-
-h2 {
-  margin-top: 2rem;
-  font-size: 1.4rem;
-  color: #c792ea;
-  text-align: left;
-}
-
-.card {
-  background-color: #161b22;
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-  margin: 20px 0;
-  cursor: pointer;
-}
-
-.card h3 {
-  margin: 0;
-  color: #58a6ff;
-}
-
-/* Настройки для раскрытой карточки */
-.project-content {
-  display: none; /* Переключается скриптом на flex */
-  margin-top: 1.5rem;
-  gap: 20px;
-  align-items: flex-start;
-  border-top: 1px solid #30363d;
-  padding-top: 1.5rem;
-  text-align: left;
-}
-
-.project-left {
-  flex: 0 0 250px; /* Фикс ширина под мобилку */
-}
-
-.project-left video {
   width: 100%;
-  border-radius: 10px;
-  max-height: 450px;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #161b22;
 }
 
-.project-right {
+.accordion-button {
+  width: 100%;
+  padding: 1.2rem;
+  background: none;
+  color: #58a6ff;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.accordion-content {
+  display: none;
+  padding: 1.5rem;
+  border-top: 1px solid #30363d;
+  gap: 20px;
+  background-color: #0d1117;
+}
+
+.accordion-item.active .accordion-content {
+  display: flex;
+}
+
+.video-side {
+  flex: 0 0 250px;
+}
+
+.video-side video {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+}
+
+.text-side {
   flex: 1;
 }
 
@@ -116,73 +111,7 @@ h2 {
   text-align: center;
 }
 
-/* Стили для раскрывающихся карточек */
-.accordion-item {
-  margin-bottom: 1rem;
-  width: 100%;
-}
-
-.accordion-button {
-  width: 100%;
-  padding: 1rem;
-  background-color: #161b22;
-  color: #58a6ff;
-  border: 1px solid #30363d;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: left;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: background-color 0.3s;
-}
-
-.accordion-button:hover {
-  background-color: #1c2128;
-}
-
-.accordion-content {
-  display: none;
-  background-color: #161b22;
-  border-radius: 0 0 8px 8px;
-  padding: 1.5rem;
-  margin-top: -5px;
-  border: 1px solid #30363d;
-  border-top: none;
-}
-
-.accordion-item.active .accordion-content {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.accordion-item.active .accordion-button {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  color: #f0f6fc;
-}
-
-.video-side {
-  flex: 1;
-  max-width: 40%;
-}
-
-.video-side video {
-  width: 100%;
-  border-radius: 8px;
-  display: block;
-}
-
-.text-side {
-  flex: 1.5;
-}
-
-/* Адаптивность для мобильных */
 @media (max-width: 600px) {
-  .accordion-item.active .accordion-content {
-    flex-direction: column;
-  }
-  .video-side {
-    max-width: 100%;
-  }
+  .accordion-item.active .accordion-content { flex-direction: column; align-items: center; }
+  .video-side { flex: none; width: 100%; max-width: 250px; }
 }
