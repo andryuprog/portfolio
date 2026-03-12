@@ -138,9 +138,7 @@ body {
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.4);
       text-align: center;
-      width: 380px;      /* фиксированная ширина карточки */
-      height: 680px;     /* фиксированная высота карточки */
-      overflow: hidden;  /* чтобы видео не выходило за границы */
+      width: 380px;       /* фиксированная ширина карточки */
       margin: 20px auto;
     }
 
@@ -148,15 +146,14 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      padding: 10px 0;
+      gap: 12px;          /* отступ между текстом и видео */
     }
 
     .project-content video {
-      width: 100%;     /* подстраивается под ширину карточки */
-      height: auto;    /* сохраняет пропорции */
-      max-height: 90%; /* чтобы видео не выходило за высоту карточки */
+      width: 100%;        /* подстраивается по ширине карточки */
+      height: 640px;      /* фиксированная высота, как мобильный экран */
       border-radius: 12px;
+      object-fit: cover;  /* видео масштабируется без растяжения */
     }
 
     .qrcode {
