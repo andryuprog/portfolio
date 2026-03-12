@@ -115,3 +115,74 @@ h2 {
   color: #8b949e;
   text-align: center;
 }
+
+/* Стили для раскрывающихся карточек */
+.accordion-item {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #161b22;
+  color: #58a6ff;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.accordion-button:hover {
+  background-color: #1c2128;
+}
+
+.accordion-content {
+  display: none;
+  background-color: #161b22;
+  border-radius: 0 0 8px 8px;
+  padding: 1.5rem;
+  margin-top: -5px;
+  border: 1px solid #30363d;
+  border-top: none;
+}
+
+.accordion-item.active .accordion-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.accordion-item.active .accordion-button {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #f0f6fc;
+}
+
+.video-side {
+  flex: 1;
+  max-width: 40%;
+}
+
+.video-side video {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.text-side {
+  flex: 1.5;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 600px) {
+  .accordion-item.active .accordion-content {
+    flex-direction: column;
+  }
+  .video-side {
+    max-width: 100%;
+  }
+}
