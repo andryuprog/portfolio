@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="favicon.png">
+<title>Flutter Developer Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+
+<script>
+function toggle(id){
+const el = document.getElementById(id);
+el.style.display = el.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="project-banner.png" class="banner">
+
+<nav class="nav">
+<a href="portfolio.en.html">Home</a>
+<a href="privacy.html">Privacy</a>
+<a href="support.html">Support</a>
+</nav>
+
+<h1>Flutter Mobile Developer</h1>
+
+<p>
+Разработчик мобильных приложений на Flutter.
+Имею опыт создания production-приложений с Firebase, REST API и современными архитектурами управления состоянием.
+</p>
+
+<h2>Технологии</h2>
+
+<ul>
+<li>Flutter / Dart</li>
+<li>Riverpod, BLoC, Cubit</li>
+<li>Firebase (Push, Remote Config, Crashlytics)</li>
+<li>REST API</li>
+<li>Публикация в Google Play</li>
+<li>Figma</li>
+</ul>
+
+<h2>Проекты</h2>
+
+<div class="card" onclick="toggle('app1')">
+<h3>TradeSizer</h3>
+
+<div id="app1" style="display:none">
+
+<p>
+Crypto trading position calculator based on ATR volatility.
+</p>
+
+<p>
+Stack: Flutter, Riverpod, Firebase
+</p>
+
+<video controls width="100%">
+<source src="videos/tradesizer.mp4" type="video/mp4">
+</video>
+
+</div>
+</div>
+
+<div class="card" onclick="toggle('app2')">
+<h3>Crypto Portfolio App</h3>
+
+<div id="app2" style="display:none">
+
+<p>
+Mobile application for tracking crypto portfolio and market statistics.
+</p>
+
+<p>
+Stack: Flutter, REST API, Firebase
+</p>
+
+<video controls width="100%">
+<source src="videos/portfolio.mp4" type="video/mp4">
+</video>
+
+</div>
+</div>
+
+<div class="footer">
+Contact: <a href="mailto:support@programingstudio.com">support@programingstudio.com</a>
+</div>
+
+</div>
+
+</body>
+</html>
