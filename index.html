@@ -89,45 +89,59 @@
 
       <div class="accordion-item">
         <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
-          ▶ 📊 Crypto Portfolio Tracker
+          ▶ 🌙 Day Mode
         </button>
         <div class="accordion-content">
           <div class="video-side">
             <video src="videos/video_1.mp4" controls muted playsinline></video>
           </div>
           <div class="text-side">
-            <h3>Crypto Portfolio Tracker</h3>
-            <p class="project-desc">Приложение для отслеживания криптовалютного портфеля в реальном времени. Мониторинг позиций, расчет PnL, уведомления об изменении цены.</p>
+            <h3>Day Mode</h3>
+            <p class="project-desc">Приложение для отслеживания собственных биоритмов и состояния. Реализована запись и воспроизведение звука, добавление заметок, локальные push-уведомления. Корреляция собранных данных просчитывается на бэкенде.</p>
             <div class="tech-stack">
               <span class="tech-label">Стек:</span>
               <span class="tech-tag">Flutter</span>
               <span class="tech-tag">Riverpod</span>
-              <span class="tech-tag">Firebase</span>
-              <span class="tech-tag">WebSocket</span>
-              <span class="tech-tag">CoinGecko API</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">SharedPreferences</span>
+              <span class="tech-tag">auto_route</span>
+              <span class="tech-tag">flutter_secure_storage</span>
+              <span class="tech-tag">dio</span>
+              <span class="tech-tag">flutter_local_notifications</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">FastAPI</span>
             </div>
+            <p class="project-note">Тёмная и светлая тема. Локальный бэкенд на Python с синхронизацией через FastAPI.</p>
           </div>
         </div>
       </div>
 
       <div class="accordion-item">
         <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
-          ▶ 🛒 E-Commerce Mobile App
+          ▶ 📊 TradeSizer
         </button>
         <div class="accordion-content">
           <div class="video-side">
             <video src="videos/video_2.mp4" controls muted playsinline></video>
           </div>
           <div class="text-side">
-            <h3>E-Commerce Mobile App</h3>
-            <p class="project-desc">Полноценное приложение для интернет-магазина с каталогом товаров, корзиной, оплатой и отслеживанием заказов.</p>
+            <h3>TradeSizer</h3>
+            <p class="project-desc">Офлайн калькулятор для расчёта позиций и стоп-лоса для криптовалютной биржи. Внедрено нативное «Поделиться приложением», оплата Google, Firebase Analytics и Crashlytics, push-уведомления и Remote Config.</p>
             <div class="tech-stack">
               <span class="tech-label">Стек:</span>
               <span class="tech-tag">Flutter</span>
-              <span class="tech-tag">BLoC</span>
-              <span class="tech-tag">Firebase Auth</span>
-              <span class="tech-tag">Stripe</span>
+              <span class="tech-tag">Firebase</span>
               <span class="tech-tag">FCM Push</span>
+              <span class="tech-tag">Remote Config</span>
+              <span class="tech-tag">Crashlytics</span>
+              <span class="tech-tag">Google Play Billing</span>
+            </div>
+            <p class="project-note">Реализовано ознакомление с приложением, генерация ключей и подписи, регистрация аккаунта в Google Play, публикация и тестирование. Анимация в Blender.</p>
+            <div class="project-media">
+              <img src="EN.jpg" alt="TradeSizer Promo" class="project-image">
+              <a href="https://www.youtube.com/watch?v=zZDh7ZoDMdc" target="_blank" class="video-link">
+                🎬 Смотреть рекламное видео для Google Play
+              </a>
             </div>
           </div>
         </div>
@@ -135,22 +149,22 @@
 
       <div class="accordion-item">
         <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
-          ▶ 🏋️ Fitness Tracker Pro
+          ▶ 🏠 Pull Sky
         </button>
         <div class="accordion-content">
           <div class="video-side">
             <video src="videos/video_3.mp4" controls muted playsinline></video>
           </div>
           <div class="text-side">
-            <h3>Fitness Tracker Pro</h3>
-            <p class="project-desc">Приложение для трекинга тренировок, питания и прогресса. Интеграция с умными часами, построение графиков, персональные рекомендации.</p>
+            <h3>Pull Sky</h3>
+            <p class="project-desc">Магазин по продаже натяжных потолков. Участие в разработке, помощь в доделке проекта.</p>
             <div class="tech-stack">
               <span class="tech-label">Стек:</span>
               <span class="tech-tag">Flutter</span>
-              <span class="tech-tag">Riverpod</span>
-              <span class="tech-tag">Health Kit</span>
-              <span class="tech-tag">Grafana</span>
-              <span class="tech-tag">Python Backend</span>
+              <span class="tech-tag">Cubit</span>
+              <span class="tech-tag">SharedPreferences</span>
+              <span class="tech-tag">REST API</span>
+              <span class="tech-tag">Figma</span>
             </div>
           </div>
         </div>
@@ -158,45 +172,46 @@
 
       <div class="accordion-item">
         <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
-          ▶ 🏨 Hotel Booking App
+          ▶ 🧮 Калькулятор
         </button>
         <div class="accordion-content">
           <div class="video-side">
             <video src="videos/video_4.mp4" controls muted playsinline></video>
           </div>
           <div class="text-side">
-            <h3>Hotel Booking App</h3>
-            <p class="project-desc">Сервис бронирования отелей с интерактивной картой, отзывами, системой лояльности и онлайн-оплатой.</p>
+            <h3>Калькулятор</h3>
+            <p class="project-desc">Пробный, один из первых проектов. Подключение стороннего API погоды, работа с базой данных.</p>
             <div class="tech-stack">
               <span class="tech-label">Стек:</span>
               <span class="tech-tag">Flutter</span>
-              <span class="tech-tag">Cubit</span>
-              <span class="tech-tag">Google Maps</span>
-              <span class="tech-tag">Remote Config</span>
-              <span class="tech-tag">Go Microservices</span>
+              <span class="tech-tag">Cubit/BLoC</span>
+              <span class="tech-tag">SharedPreferences</span>
+              <span class="tech-tag">Weather API</span>
+              <span class="tech-tag">SQLite</span>
             </div>
+            <p class="project-note">Локальная регистрация и авторизация пользователя.</p>
           </div>
         </div>
       </div>
 
       <div class="accordion-item">
         <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
-          ▶ 📱 Social Media Dashboard
+          ▶ 👽 Rick and Morty
         </button>
         <div class="accordion-content">
           <div class="video-side">
             <video src="videos/video_5.mp4" controls muted playsinline></video>
           </div>
           <div class="text-side">
-            <h3>Social Media Dashboard</h3>
-            <p class="project-desc">Дашборд для управления социальными сетями: публикация постов, аналитика, планирование контента, мониторинг упоминаний.</p>
+            <h3>Rick and Morty</h3>
+            <p class="project-desc">Приложение с информацией о персонажах из сериала «Рик и Морти». Загрузка списков, кеширование данных, реализован поиск.</p>
             <div class="tech-stack">
               <span class="tech-label">Стек:</span>
               <span class="tech-tag">Flutter</span>
-              <span class="tech-tag">Riverpod</span>
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">VictoriaMetrics</span>
-              <span class="tech-tag">Twitter API</span>
+              <span class="tech-tag">BLoC</span>
+              <span class="tech-tag">Rick and Morty API</span>
+              <span class="tech-tag">Dio</span>
+              <span class="tech-tag">Cache</span>
             </div>
           </div>
         </div>
