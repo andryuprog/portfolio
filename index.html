@@ -8,11 +8,13 @@
   <link rel="stylesheet" href="styles.css">
 
 <script>
-function toggle(id){
+function toggle(id) {
   const el = document.getElementById(id);
-  const card = el.parentElement;       // получаем саму карточку
-  el.style.display = el.style.display === "block" ? "none" : "flex";
-  card.classList.toggle('open');
+  if (el.style.display === "flex") {
+    el.style.display = "none";
+  } else {
+    el.style.display = "flex";
+  }
 }
 </script>
 
@@ -54,23 +56,18 @@ REST APIs and clean UI implementation.
 
 <div class="card" onclick="toggle('app1')">
   <h3>TradeSizer — Crypto Risk Calculator</h3>
-  
-  <div id="app1" class="project-content" style="display:none">
+
+  <div id="app1" class="project-content">
     <div class="project-left">
       <video controls playsinline>
         <source src="videos/video_4.mp4" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
     </div>
-
+    
     <div class="project-right">
-      <p>
-        Mobile application for calculating position size and stop-loss based on ATR volatility.
-        Designed for traders who want to manage risk efficiently.
-      </p>
+      <p>Mobile application for calculating position size and stop-loss based on ATR volatility.</p>
       <p><strong>Stack:</strong> Flutter, Riverpod, Firebase</p>
-      
-      <a href="#" class="button">View on GitHub</a>
+      <a href="https://github.com/andryuprog" class="button">View on GitHub</a>
     </div>
   </div>
 </div>
@@ -97,23 +94,18 @@ Designed for traders who want to manage risk efficiently.
 
 <div class="card" onclick="toggle('app2')">
   <h3>TradeSizer — Crypto Risk Calculator</h3>
-  
-  <div id="app2" class="project-content" style="display:none">
+
+  <div id="app2" class="project-content">
     <div class="project-left">
       <video controls playsinline>
         <source src="videos/video_4.mp4" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
     </div>
-
+    
     <div class="project-right">
-      <p>
-        Mobile application for calculating position size and stop-loss based on ATR volatility.
-        Designed for traders who want to manage risk efficiently.
-      </p>
+      <p>Mobile application for calculating position size and stop-loss based on ATR volatility.</p>
       <p><strong>Stack:</strong> Flutter, Riverpod, Firebase</p>
-      
-      <a href="#" class="button">View on GitHub</a>
+      <a href="https://github.com/andryuprog" class="button">View on GitHub</a>
     </div>
   </div>
 </div>
