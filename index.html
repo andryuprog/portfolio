@@ -3,85 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png" />
   <title>Flutter Developer Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <script>
-    function toggle(id) {
-      const el = document.getElementById(id);
-      // Проверяем текущее состояние. Если скрыто или пусто — ставим flex
-      if (el.style.display === "none" || el.style.display === "") {
-        el.style.display = "flex";
-      } else {
-        el.style.display = "none";
-      }
-    }
-  </script>
+
+<script>
+function toggle(id){
+  const el = document.getElementById(id);
+  const card = el.parentElement;       // получаем саму карточку
+  el.style.display = el.style.display === "block" ? "none" : "flex";
+  card.classList.toggle('open');
+}
+</script>
+
 </head>
+
 <body>
 
 <div class="container">
-  <img src="project-banner.png" alt="Banner" class="banner">
 
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="support.html">Support</a>
-  </nav>
+<img src="project-banner.png" alt="Flutter Developer Portfolio" class="banner">
 
-  <h1>Flutter Mobile Developer</h1>
-  <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
-    Mobile developer focused on building cross-platform applications with Flutter. 
-    Experience with modern architectures, Firebase, and clean UI.
-  </p>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="privacy.html">Privacy</a>
+<a href="support.html">Support</a>
+</nav>
 
-  <h2>Tech Stack</h2>
-  <ul>
-    <li>Flutter / Dart (Riverpod, BLoC)</li>
-    <li>Firebase (Push, Remote Config)</li>
-    <li>REST API & Clean Architecture</li>
-  </ul>
+<h1>Flutter Mobile Developer</h1>
 
-  <h2>Projects</h2>
+<p>
+Mobile developer focused on building cross-platform applications with Flutter.
+Experience creating production apps with modern architectures, Firebase services,
+REST APIs and clean UI implementation.
+</p>
 
-  <div class="card" onclick="toggle('app1')">
-    <h3>TradeSizer — Crypto Risk Calculator</h3>
-    <div id="app1" class="project-content">
-      <div class="project-left">
-        <video controls playsinline>
-          <source src="videos/video_4.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="project-right">
-        <p>Mobile application for calculating position size and stop-loss based on ATR volatility. Designed for traders who want to manage risk efficiently.</p>
-        <p><strong>Stack:</strong> Flutter, Riverpod, Firebase</p>
-        <a href="https://github.com/andryuprog" class="button" onclick="event.stopPropagation()">View on GitHub</a>
-      </div>
+<h2>Tech Stack</h2>
+
+<ul>
+<li>Flutter / Dart</li>
+<li>Riverpod, BLoC, Cubit</li>
+<li>Firebase (Push Notifications, Remote Config, Crashlytics)</li>
+<li>REST API integration</li>
+<li>Google Play publishing</li>
+<li>Git, Clean Architecture, SOLID</li>
+<li>Figma / UI implementation</li>
+</ul>
+
+<h2>Projects</h2>
+
+<div class="card" onclick="toggle('project1')">
+  <h3>TradeSizer — Crypto Risk Calculator</h3>
+
+  <div id="project1" class="project-content" style="display:none">
+    <div class="project-left">
+      <video controls>
+        <source src="videos/video_4.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="project-right">
+      <p>
+        Mobile application for calculating position size and stop-loss based on ATR volatility.
+        Designed for traders who want to manage risk efficiently.
+      </p>
+      <p><strong>Stack:</strong> Flutter, Riverpod, Firebase</p>
+      <!-- Можно добавить другие детали проекта -->
     </div>
   </div>
+</div>
 
-  <div class="card" onclick="toggle('app2')">
-    <h3>Crypto Portfolio Tracker</h3>
-    <div id="app2" class="project-content">
-      <div class="project-left">
-        <video controls playsinline>
-          <source src="videos/portfolio.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="project-right">
-        <p>Application for tracking cryptocurrency portfolio and market statistics. Includes asset monitoring and simplified analytics.</p>
-        <p><strong>Stack:</strong> Flutter, REST API, Firebase</p>
-        <a href="https://github.com/andryuprog" class="button" onclick="event.stopPropagation()">View on GitHub</a>
-      </div>
+<h3>TradeSizer — Crypto Risk Calculator</h3>
+
+<div id="project1" class="project-content" style="display:none">
+
+<p>
+Mobile application for calculating position size and stop-loss based on ATR volatility.
+Designed for traders who want to manage risk efficiently.
+</p>
+
+<p>
+<strong>Stack:</strong> Flutter, Riverpod, Firebase
+</p>
+
+<video controls>
+<source src="videos/video_4.mp4" type="video/mp4">
+</video>
+
+</div>
+</div>
+
+<div class="card" onclick="toggle('project2')">
+  <h3>TradeSizer — Crypto Risk Calculator</h3>
+
+  <div id="project1" class="project-content">
+    <div class="project-left">
+      <video controls>
+        <source src="videos/video_4.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="project-right">
+      <p>
+        Mobile application for calculating position size and stop-loss based on ATR volatility.
+        Designed for traders who want to manage risk efficiently.
+      </p>
+      <p><strong>Stack:</strong> Flutter, Riverpod, Firebase</p>
     </div>
   </div>
+</div>
 
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:support@programingstudio.com" style="color: #58a6ff;">support@programingstudio.com</a></p>
-  <p>Telegram: <a href="https://t.me/andryuprog" style="color: #58a6ff;">@andryuprog</a></p>
+<h3>Crypto Portfolio Tracker</h3>
 
-  <div class="footer">
-    © 2026 Flutter Developer Portfolio
-  </div>
+<div id="project2" class="project-content" style="display:none">
+
+<p>
+Application for tracking cryptocurrency portfolio and market statistics.
+Includes asset monitoring and simplified analytics.
+</p>
+
+<p>
+<strong>Stack:</strong> Flutter, REST API, Firebase
+</p>
+
+<video controls>
+<source src="videos/portfolio.mp4" type="video/mp4">
+</video>
+
+</div>
+</div>
+
+<h2>Contact</h2>
+
+<p>
+If you would like to discuss collaboration or development opportunities:
+</p>
+
+<p>
+Email: <a href="mailto:support@programingstudio.com">support@programingstudio.com</a><br>
+Telegram: <a href="https://t.me/andryuprog">@andryuprog</a>
+</p>
+
+<div class="footer">
+© 2026 Flutter Developer Portfolio
+</div>
+
 </div>
 
 </body>
