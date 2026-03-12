@@ -9,8 +9,10 @@
 
 <script>
 function toggle(id){
-const el = document.getElementById(id);
-el.style.display = el.style.display === "block" ? "none" : "block";
+  const el = document.getElementById(id);
+  const card = el.parentElement;       // получаем саму карточку
+  el.style.display = el.style.display === "block" ? "none" : "flex";
+  card.classList.toggle('open');
 }
 </script>
 

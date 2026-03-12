@@ -134,28 +134,48 @@ body {
 
     .card {
       background-color: #161b22;
-      padding: 16px;
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-      text-align: center;
-      width: 380px;       /* фиксированная ширина карточки */
       margin: 20px auto;
+      width: 90%;           /* на всю ширину контейнера */
+      max-width: 800px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      overflow: hidden;     /* скрываем контент до раскрытия */
+    }
+
+    .card h3 {
+      padding: 16px;
+      margin: 0;
+      color: #58a6ff;
     }
 
     .project-content {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;          /* отступ между текстом и видео */
+      flex-direction: row;   /* две колонки: видео и описание */
+      gap: 20px;
+      padding: 16px;
+      opacity: 0;
+      max-height: 0;
+      transition: all 0.4s ease;
     }
 
-    .project-content video {
-      width: 100%;        /* подстраивается по ширине карточки */
-      height: 640px;      /* фиксированная высота, как мобильный экран */
+    .card.open .project-content {
+      opacity: 1;
+      max-height: 1000px;    /* достаточно, чтобы вместить видео + текст */
+    }
+
+    .project-left video {
+      width: 360px;           /* как мобильный экран */
+      height: 640px;
       border-radius: 12px;
-      object-fit: cover;  /* видео масштабируется без растяжения */
+      object-fit: cover;
     }
 
+    .project-right {
+      flex: 1;               /* описание занимает оставшееся место */
+      color: #f0f6fc;
+    }
     .qrcode {
       margin: 0 auto 12px auto;
       width: 160px;
