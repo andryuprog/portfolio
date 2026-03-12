@@ -53,27 +53,19 @@ body {
     }
 
     .project-content video {
-      width: 360px;        /* ширина видео, как мобильный экран */
-      height: 640px;       /* высота видео */
-      max-width: 90vw;     /* уменьшение на маленьких экранах */
+      width: 360px;        /* ширина, как экран телефона */
+      height: 640px;       /* высота */
+      max-width: 90vw;     /* подстраивается на маленьких экранах */
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
 
+    /* Убираем скролл */
     .card div[id^="project"] {
-      max-height: 60vh;      /* максимум 60% высоты экрана */
-      overflow-y: auto;       /* вертикальная прокрутка внутри блока */
-      padding: 10px 0;        /* немного отступов */
+      padding: 10px 0;
+      max-height: none;
+      overflow-y: visible;
     }
-
-    .card video {
-      width: 100%;   /* подстраивается по ширине */
-      height: auto;  /* сохраняем пропорции */
-      border-radius: 12px;
-    }
-
-
-
     .nav a {
       padding: 0.5rem 1rem;
       background-color: #161b22;
