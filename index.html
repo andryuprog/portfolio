@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flutter Portfolio</title>
+  <title>Flutter Developer Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <script>
     function toggle(id) {
       const el = document.getElementById(id);
+      // Важно: переключаем именно на flex для колонок
       el.style.display = (el.style.display === "flex") ? "none" : "flex";
     }
   </script>
@@ -15,7 +16,7 @@
 <body>
 
 <div class="container">
-  <img src="project-banner.png" class="banner" alt="Banner">
+  <img src="project-banner.png" alt="Banner" class="banner">
 
   <nav class="nav">
     <a href="index.html">Home</a>
@@ -52,17 +53,16 @@
         </video>
       </div>
       <div class="project-right">
-        <p>App for tracking cryptocurrency assets and market data in real-time.</p>
+        <p>Application for tracking cryptocurrency portfolio and market statistics.</p>
         <p><strong>Stack:</strong> Flutter, REST API, Firebase</p>
         <a href="https://github.com/andryuprog" class="button" onclick="event.stopPropagation()">View on GitHub</a>
       </div>
     </div>
   </div>
 
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:support@programingstudio.com" style="color: #58a6ff;">support@programingstudio.com</a></p>
-  <p>Telegram: <a href="https://t.me/andryuprog" style="color: #58a6ff;">@andryuprog</a></p>
-
+  <div class="footer">
+    © 2026 Flutter Developer Portfolio
+  </div>
 </div>
 
 </body>
