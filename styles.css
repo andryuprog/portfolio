@@ -226,6 +226,47 @@ p {
 .text-side h3 {
   margin-top: 0;
   color: #c792ea;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.project-desc {
+  color: #c9d1d9;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Tech стек */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.tech-label {
+  font-weight: bold;
+  color: #58a6ff;
+  font-size: 0.95rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #7ee787;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-weight: 500;
+}
+
+.tech-tag:hover {
+  background-color: #30363d;
+  border-color: #58a6ff;
 }
 
 /* Контактная секция */
