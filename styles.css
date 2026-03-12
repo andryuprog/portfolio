@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #0d1117; 
+  background-color: #0d1117;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -35,10 +35,12 @@ body {
   gap: 1rem;
   margin-bottom: 2rem;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .nav a {
   flex: 1;
+  min-width: 120px;
   text-align: center;
   padding: 0.6rem 0;
   background-color: #161b22;
@@ -54,9 +56,104 @@ body {
   transform: translateY(-2px);
 }
 
-h1 { font-size: 2rem; color: #58a6ff; text-align: center; }
-h2 { color: #c792ea; margin-top: 2rem; }
-p { font-size: 1.1rem; }
+/* Hero секция */
+.hero {
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #58a6ff;
+  margin-bottom: 0.5rem;
+}
+
+.hero .subtitle {
+  font-size: 1.2rem;
+  color: #8b949e;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Секции */
+.skills-section,
+.projects-section,
+.contact-section {
+  margin-bottom: 3rem;
+}
+
+h1, h2 {
+  color: #58a6ff;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-desc {
+  text-align: center;
+  color: #8b949e;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+/* Сетка навыков */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: #58a6ff;
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+  color: #c792ea;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #21262d;
+  color: #c9d1d9;
+}
+
+.skill-card li:last-child {
+  border-bottom: none;
+}
+
+.skill-card li strong {
+  color: #58a6ff;
+}
 
 /* ГАРМОШКА-КАРТОЧКИ */
 .accordion-item {
@@ -79,6 +176,7 @@ p { font-size: 1.1rem; }
   font-weight: bold;
   font-size: 1.1rem;
   outline: none;
+  transition: background-color 0.3s;
 }
 
 .accordion-button:hover {
@@ -130,11 +228,66 @@ p { font-size: 1.1rem; }
   color: #c792ea;
 }
 
+/* Контактная секция */
+.contact-section {
+  text-align: center;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.contact-section h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  color: #8b949e;
+  margin-bottom: 1.5rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #238636;
+  color: #f0f6fc;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-btn:hover {
+  background-color: #2ea043;
+  transform: translateY(-2px);
+}
+
 .footer {
   margin-top: 3rem;
   font-size: 0.9rem;
   color: #8b949e;
   text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #30363d;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .nav {
+    flex-direction: column;
+  }
+  
+  .nav a {
+    min-width: auto;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 600px) {

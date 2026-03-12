@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crypto Position Calculator</title>
+  <title>Flutter Developer Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
@@ -13,91 +13,149 @@
 
     <nav class="nav">
       <a href="index.html">Home</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="test.html">Testing</a>
-      <a href="support.html">Support</a>
+      <a href="portfolio.en.html">Portfolio EN</a>
+      <a href="portfolio.ru.html">Portfolio RU</a>
+      <a href="portfolio.uk.html">Portfolio UKR</a>
     </nav>
 
-    <h1>Position and Stop-Loss Calculator</h1>
-    <p>Управляйте рисками эффективно. Введите данные ATR и получите расчет позиции.</p>
+    <header class="hero">
+      <h1>Flutter Mobile Developer</h1>
+      <p class="subtitle">Создаю современные кроссплатформенные приложения для Android и iOS</p>
+    </header>
 
-    <div class="accordion-item">
-      <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
-        ▶ Демонстрация 1
-      </button>
-      <div class="accordion-content">
-        <div class="video-side">
-          <video src="videos/video_1.mp4" controls muted playsinline></video>
+    <section class="skills-section">
+      <h2>🛠 Технические навыки</h2>
+      
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">📱</div>
+          <h3>State Management</h3>
+          <ul>
+            <li><strong>Riverpod</strong> — современный подход к управлению состоянием</li>
+            <li><strong>BLoC / Cubit</strong> — проверенная архитектура для крупных проектов</li>
+          </ul>
         </div>
-        <div class="text-side">
-          <h3>Функционал расчета</h3>
-          <p>Описание функции. Текст автоматически подстроится под высоту вашего вертикального видео.</p>
+
+        <div class="skill-card">
+          <div class="skill-icon">🔥</div>
+          <h3>Firebase</h3>
+          <ul>
+            <li>Push уведомления (FCM)</li>
+            <li>Remote Config</li>
+            <li>Crashlytics / Crash Analytics</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>Design Tools</h3>
+          <ul>
+            <li>Figma — работа с макетами</li>
+            <li>Adobe Illustrator — векторная графика</li>
+            <li>Blender — 3D моделирование</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🚀</div>
+          <h3>Публикация</h3>
+          <ul>
+            <li>Google Play Market (Android)</li>
+            <li>App Store (iOS)</li>
+            <li>Настройка CI/CD</li>
+          </ul>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="accordion-item">
-      <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
-        ▶ Демонстрация 2
-      </button>
-      <div class="accordion-content">
-        <div class="video-side">
-          <video src="videos/video_2.mp4" controls muted playsinline></video>
-        </div>
-        <div class="text-side">
-          <h3>Аналитика</h3>
-          <p>Второй блок с описанием. Видео слева сохраняет свои оригинальные вертикальные пропорции.</p>
+    <section class="projects-section">
+      <h2>📋 Проекты</h2>
+      <p class="section-desc">Нажмите на кнопку, чтобы увидеть детали проекта</p>
+
+      <div class="accordion-item">
+        <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
+          ▶ Проект 1
+        </button>
+        <div class="accordion-content">
+          <div class="video-side">
+            <video src="videos/video_1.mp4" controls muted playsinline></video>
+          </div>
+          <div class="text-side">
+            <h3>Название проекта</h3>
+            <p>Описание проекта. Используемые технологии: Riverpod, Firebase, Push уведомления.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="accordion-item">
-      <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
-        ▶ Демонстрация 3
-      </button>
-      <div class="accordion-content">
-        <div class="video-side">
-          <video src="videos/video_3.mp4" controls muted playsinline></video>
-        </div>
-        <div class="text-side">
-          <h3>Управление рисками</h3>
-          <p>Третий блок с описанием функционала калькулятора.</p>
+      <div class="accordion-item">
+        <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
+          ▶ Проект 2
+        </button>
+        <div class="accordion-content">
+          <div class="video-side">
+            <video src="videos/video_2.mp4" controls muted playsinline></video>
+          </div>
+          <div class="text-side">
+            <h3>Название проекта</h3>
+            <p>Описание проекта. Используемые технологии: BLoC, Remote Config, Crashlytics.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="accordion-item">
-      <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
-        ▶ Демонстрация 4
-      </button>
-      <div class="accordion-content">
-        <div class="video-side">
-          <video src="videos/video_4.mp4" controls muted playsinline></video>
-        </div>
-        <div class="text-side">
-          <h3>Настройки ATR</h3>
-          <p>Четвертый блок с описанием настроек ATR индикатора.</p>
+      <div class="accordion-item">
+        <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
+          ▶ Проект 3
+        </button>
+        <div class="accordion-content">
+          <div class="video-side">
+            <video src="videos/video_3.mp4" controls muted playsinline></video>
+          </div>
+          <div class="text-side">
+            <h3>Название проекта</h3>
+            <p>Описание проекта. Полный цикл разработки от дизайна до публикации в Play Market.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="accordion-item">
-      <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
-        ▶ Демонстрация 5
-      </button>
-      <div class="accordion-content">
-        <div class="video-side">
-          <video src="videos/video_5.mp4" controls muted playsinline></video>
-        </div>
-        <div class="text-side">
-          <h3>Итоги и результаты</h3>
-          <p>Пятый блок с итоговым описанием результатов расчета.</p>
+      <div class="accordion-item">
+        <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
+          ▶ Проект 4
+        </button>
+        <div class="accordion-content">
+          <div class="video-side">
+            <video src="videos/video_4.mp4" controls muted playsinline></video>
+          </div>
+          <div class="text-side">
+            <h3>Название проекта</h3>
+            <p>Описание проекта. Кроссплатформенное решение для бизнеса.</p>
+          </div>
         </div>
       </div>
-    </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
+          ▶ Проект 5
+        </button>
+        <div class="accordion-content">
+          <div class="video-side">
+            <video src="videos/video_5.mp4" controls muted playsinline></video>
+          </div>
+          <div class="text-side">
+            <h3>Название проекта</h3>
+            <p>Описание проекта. Индивидуальная разработка под ключ.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2>📬 Связаться со мной</h2>
+      <p>Готов обсудить ваш проект и предложить оптимальное решение.</p>
+      <a href="mailto:your-email@example.com" class="contact-btn">Написать письмо</a>
+    </section>
 
     <div class="footer">
-      © 2025 Position and Stop-Loss Calculator.
+      © 2025 Flutter Developer Portfolio. All rights reserved.
     </div>
   </div>
 </body>
