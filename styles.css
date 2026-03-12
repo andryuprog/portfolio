@@ -51,6 +51,12 @@ body {
       padding: 10px 0;        /* немного отступов */
     }
 
+    .card video {
+      width: 100%;   /* подстраивается по ширине */
+      height: auto;  /* сохраняем пропорции */
+      border-radius: 12px;
+    }
+
 
 
     .nav a {
