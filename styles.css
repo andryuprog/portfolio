@@ -139,8 +139,8 @@ body {
       margin: 20px 0;
       padding: 16px;
       cursor: pointer;
-      width: 100%;          /* растягиваем на всю ширину контейнера */
-      overflow: hidden;     /* чтобы содержимое не вылазило */
+      width: 100%;        /* растянуть по ширине контейнера */
+      overflow: hidden;   /* скрываем лишнее, когда свернуто */
     }
 
     .card h3 {
@@ -148,10 +148,13 @@ body {
       color: #58a6ff;
     }
 
+    /* Скрытое содержимое */
     .project-content {
+      display: none; /* toggle будет менять на block */
+      margin-top: 12px;
       display: flex;
       gap: 16px;
-      margin-top: 10px;
+      align-items: flex-start;
     }
 
     .project-left {
@@ -161,6 +164,7 @@ body {
     .project-left video {
       width: 100%;
       height: auto;
+      max-height: 400px;  /* ограничение по высоте */
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
