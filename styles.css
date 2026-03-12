@@ -45,7 +45,6 @@ body {
       margin-bottom: 2rem;
     }
 
-        /* Контейнер раскрываемого проекта */
     .project-content {
       padding: 10px 0;
       display: flex;
@@ -53,11 +52,10 @@ body {
       align-items: center;
     }
 
-    /* Видео под мобильный экран */
     .project-content video {
-      width: 360px;       /* ширина, как мобильный экран */
-      height: 640px;      /* высота */
-      max-width: 90vw;    /* уменьшение на маленьких экранах */
+      width: 360px;        /* ширина видео, как мобильный экран */
+      height: 640px;       /* высота видео */
+      max-width: 90vw;     /* уменьшение на маленьких экранах */
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
