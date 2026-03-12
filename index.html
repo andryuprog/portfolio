@@ -10,9 +10,7 @@
 <script>
 function toggle(id){
   const el = document.getElementById(id);
-  const card = el.parentElement;       // получаем саму карточку
-  el.style.display = el.style.display === "block" ? "none" : "flex";
-  card.classList.toggle('open');
+  el.style.display = el.style.display === "block" ? "none" : "block";
 }
 </script>
 
@@ -53,24 +51,10 @@ REST APIs and clean UI implementation.
 <h2>Projects</h2>
 
 <div class="card" onclick="toggle('project1')">
-  <h3>TradeSizer — Crypto Risk Calculator</h3>
-  
-  <div id="project1" class="project-content" style="display:none">
-    <div class="project-left">
-      <video controls>
-        <source src="videos/video_4.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="project-right">
-      <p>Mobile application for calculating position size and stop-loss based on ATR volatility. Designed for traders who want to manage risk efficiently.</p>
-      <p><strong>Stack:</strong> Flutter, Riverpod, Firebase</p>
-    </div>
-  </div>
-</div>
 
 <h3>TradeSizer — Crypto Risk Calculator</h3>
 
-<div id="project1" class="project-content" style="display:none">
+<div id="project1" style="display:none">
 
 <p>
 Mobile application for calculating position size and stop-loss based on ATR volatility.
@@ -82,31 +66,17 @@ Designed for traders who want to manage risk efficiently.
 </p>
 
 <video controls>
-<source src="videos/video_4.mp4" type="video/mp4">
+<source src="videos/video_4.mp" type="video/mp4">
 </video>
 
 </div>
 </div>
 
 <div class="card" onclick="toggle('project2')">
-  <h3>TradeSizer — Crypto Risk Calculator</h3>
-  
-  <div id="project1" class="project-content" style="display:none">
-    <div class="project-left">
-      <video controls>
-        <source src="videos/video_4.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="project-right">
-      <p>Mobile application for calculating position size and stop-loss based on ATR volatility. Designed for traders who want to manage risk efficiently.</p>
-      <p><strong>Stack:</strong> Flutter, Riverpod, Firebase</p>
-    </div>
-  </div>
-</div>
 
 <h3>Crypto Portfolio Tracker</h3>
 
-<div id="project2" class="project-content" style="display:none">
+<div id="project2" style="display:none">
 
 <p>
 Application for tracking cryptocurrency portfolio and market statistics.
