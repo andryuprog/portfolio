@@ -38,16 +38,12 @@ body {
 
 .nav {
   display: flex;
-  justify-content: space-between; /* Распределяет кнопки по краям */
+  justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
-  width: 100%; /* Занимает всю ширину контейнера */
 }
-
 .nav a {
-  flex: 1; /* Заставляет каждую кнопку растягиваться поровну */
-  text-align: center; /* Центрирует текст внутри растянутой кнопки */
-  padding: 0.5rem 0; /* Убираем боковые паддинги, так как flex сам распределит место */
+  padding: 0.5rem 1rem;
   background-color: #161b22;
   border-radius: 8px;
   text-decoration: none;
