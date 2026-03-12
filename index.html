@@ -3,58 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="favicon.png" />
   <title>Crypto Position Calculator</title>
   <link rel="stylesheet" href="styles.css">
   <script>
     function toggle(id) {
       const el = document.getElementById(id);
+      // Если flex — скрываем, если нет — ставим flex
       el.style.display = (el.style.display === "flex") ? "none" : "flex";
     }
   </script>
 </head>
 <body>
   <div class="container">
-    <img src="project-banner.png" alt="Banner" class="banner">
+    <img src="project-banner.png" class="banner" alt="Banner">
 
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="privacy.html">Privacy</a>
-      <a href="test.html">Testing</a>
       <a href="support.html">Support</a>
     </nav>
 
     <h1>Position and Stop-Loss Calculator</h1>
 
-    <h2>Projects</h2>
+    <h2>Our Projects</h2>
 
-    <div class="card" onclick="toggle('proj1')">
+    <div class="card" onclick="toggle('app1')">
       <h3>TradeSizer App</h3>
-      <div id="proj1" class="project-content">
+      <div id="app1" class="project-content">
         <div class="project-left">
           <video controls playsinline>
             <source src="videos/video_4.mp4" type="video/mp4">
           </video>
         </div>
         <div class="project-right">
-          <p>This calculator works with ATR data and calculates NATR. Helps manage risks effectively in volatile markets.</p>
-          <p><strong>Stack:</strong> Flutter, Dart, Riverpod</p>
+          <p>Professional tool for risk management. Calculates position size based on ATR volatility data.</p>
+          <p><strong>Stack:</strong> Flutter, Riverpod, Firebase</p>
         </div>
       </div>
     </div>
 
-    <h2>Why use this calculator?</h2>
-    <p>
-      Regardless of whether you trade cryptocurrencies, stocks, or other assets, risk management is key.
-    </p>
-
-    <h2>Contacts & Support</h2>
-    <p>
-      Write to us: <a href="mailto:support@programingstudio.com">support@programingstudio.com</a>
-    </p>
+    <div class="card" onclick="toggle('app2')">
+      <h3>Portfolio Tracker</h3>
+      <div id="app2" class="project-content">
+        <div class="project-left">
+          <video controls playsinline>
+            <source src="videos/portfolio.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="project-right">
+          <p>Real-time cryptocurrency portfolio tracking and market analytics.</p>
+          <p><strong>Stack:</strong> Flutter, REST API</p>
+        </div>
+      </div>
+    </div>
 
     <div class="footer">
-      © 2025 Position and Stop-Loss Calculator. All rights reserved.
+      © 2026 Position and Stop-Loss Calculator
     </div>
   </div>
 </body>
