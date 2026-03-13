@@ -6,6 +6,21 @@
   <title>Flutter Developer Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.png" type="image/png">
+  
+  <script>
+    // Сохранение выбора языка при клике на кнопки навигации
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.nav a[href^="portfolio."]').forEach(function(link) {
+        link.addEventListener('click', function() {
+          const href = this.getAttribute('href');
+          const langMatch = href.match(/portfolio\.(en|ru|uk)\.html/);
+          if (langMatch) {
+            localStorage.setItem('preferredLang', langMatch[1]);
+          }
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   <div class="container">
