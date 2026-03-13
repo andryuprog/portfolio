@@ -1,100 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="favicon.png">
-<title>Flutter Developer Portfolio</title>
-<link rel="stylesheet" href="styles.css">
-
-<script>
-function toggle(id){
-  const el = document.getElementById(id);
-  const card = el.parentElement;       // получаем саму карточку
-  el.style.display = el.style.display === "block" ? "none" : "flex";
-  card.classList.toggle('open');
-}
-</script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flutter Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.png" type="image/png">
 </head>
-
 <body>
+  <div class="container">
+    <img src="project-banner.png" alt="Banner" class="banner">
 
-<div class="container">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="portfolio.en.html">EN</a>
+      <a href="portfolio.ru.html">RU</a>
+      <a href="portfolio.uk.html">UKR</a>
+      <a href="privacy.html">Support</a>
+    </nav>
 
-<img src="project-banner.png" class="banner">
+    <header class="hero">
+      <h1>Flutter Mobile Developer</h1>
+      <p class="subtitle">Создаю современные кроссплатформенные приложения для Android и iOS</p>
+    </header>
 
-<nav class="nav">
-<a href="portfolio.en.html">Home</a>
-<a href="privacy.html">Privacy</a>
-<a href="support.html">Support</a>
-</nav>
+    <section class="skills-section">
+      <h2>🛠 Технические навыки</h2>
+      
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">📱</div>
+          <h3>State Management</h3>
+          <ul>
+            <li><strong>Riverpod</strong> — современный подход к управлению состоянием</li>
+            <li><strong>BLoC / Cubit</strong> — проверенная архитектура для крупных проектов</li>
+          </ul>
+        </div>
 
-<h1>Flutter Mobile Developer</h1>
+        <div class="skill-card">
+          <div class="skill-icon">🔥</div>
+          <h3>Firebase</h3>
+          <ul>
+            <li>Push уведомления (FCM)</li>
+            <li>Remote Config</li>
+            <li>Crashlytics / Crash Analytics</li>
+          </ul>
+        </div>
 
-<p>
-Разработчик мобильных приложений на Flutter.
-Имею опыт создания production-приложений с Firebase, REST API и современными архитектурами управления состоянием.
-</p>
+        <div class="skill-card">
+          <div class="skill-icon">🐍</div>
+          <h3>Backend</h3>
+          <ul>
+            <li><strong>Python</strong> — серверная логика и скрипты</li>
+            <li><strong>Go</strong> — высокопроизводительные сервисы</li>
+            <li><strong>Microservices</strong> — микросервисная архитектура</li>
+          </ul>
+        </div>
 
-<h2>Технологии</h2>
+        <div class="skill-card">
+          <div class="skill-icon">🐳</div>
+          <h3>DevOps & Tools</h3>
+          <ul>
+            <li><strong>Docker</strong> — контейнеризация</li>
+            <li><strong>Postman</strong> — тестирование API</li>
+            <li><strong>Grafana, Loki, Tempo</strong> — мониторинг и логи</li>
+            <li><strong>VictoriaMetrics</strong> — метрики и аналитика</li>
+          </ul>
+        </div>
 
-<ul>
-<li>Flutter / Dart</li>
-<li>Riverpod, BLoC, Cubit</li>
-<li>Firebase (Push, Remote Config, Crashlytics)</li>
-<li>REST API</li>
-<li>Публикация в Google Play</li>
-<li>Figma</li>
-</ul>
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>Design Tools</h3>
+          <ul>
+            <li>Figma — работа с макетами</li>
+            <li>Adobe Illustrator — векторная графика</li>
+            <li>Blender — 3D моделирование</li>
+          </ul>
+        </div>
 
-<h2>Проекты</h2>
+        <div class="skill-card">
+          <div class="skill-icon">🚀</div>
+          <h3>Публикация</h3>
+          <ul>
+            <li>Google Play Market (Android)</li>
+            <li>App Store (iOS)</li>
+            <li>Настройка CI/CD</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<div class="card" onclick="toggle('app1')">
-<h3>TradeSizer</h3>
+    <section class="projects-section">
+      <h2>📋 Проекты</h2>
+      <p class="section-desc">Это только часть проектов. Нажмите на кнопку, чтобы увидеть детали</p>
 
-<div id="app1" class="project-content" style="display:none">
+      <div class="accordion-item">
+        <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
+          ▶ 🌙 Day Mode
+        </button>
+        <div class="accordion-content">
+          <div class="video-side">
+            <video src="videos/video_1.mp4" controls muted playsinline></video>
+          </div>
+          <div class="text-side">
+            <h3>Day Mode</h3>
+            <p class="project-desc">Приложение для отслеживания собственных биоритмов и состояния. Реализована запись и воспроизведение звука, добавление заметок, локальные push-уведомления. Корреляция собранных данных просчитывается на бэкенде.</p>
+            <div class="tech-stack">
+              <span class="tech-label">Стек:</span>
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Riverpod</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">SharedPreferences</span>
+              <span class="tech-tag">auto_route</span>
+              <span class="tech-tag">flutter_secure_storage</span>
+              <span class="tech-tag">dio</span>
+              <span class="tech-tag">flutter_local_notifications</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">FastAPI</span>
+            </div>
+            <p class="project-note">Тёмная и светлая тема. Локальный бэкенд на Python с синхронизацией через FastAPI.</p>
+          </div>
+        </div>
+      </div>
 
-<p>
-Crypto trading position calculator based on ATR volatility.
-</p>
+      <div class="accordion-item">
+        <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
+          ▶ 📊 TradeSizer
+        </button>
+        <div class="accordion-content">
+          <div class="video-side">
+            <video src="videos/video_2.mp4" controls muted playsinline></video>
+          </div>
+          <div class="text-side">
+            <h3>TradeSizer</h3>
+            <p class="project-desc">Офлайн калькулятор для расчёта позиций и стоп-лоса для криптовалютной биржи. Внедрено нативное «Поделиться приложением», оплата Google, Firebase Analytics и Crashlytics, push-уведомления и Remote Config.</p>
+            <div class="tech-stack">
+              <span class="tech-label">Стек:</span>
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">FCM Push</span>
+              <span class="tech-tag">Remote Config</span>
+              <span class="tech-tag">Crashlytics</span>
+              <span class="tech-tag">Google Play Billing</span>
+            </div>
+            <p class="project-note">Реализовано ознакомление с приложением, генерация ключей и подписи, регистрация аккаунта в Google Play, публикация и тестирование. Анимация в Blender.</p>
+            <div class="project-media">
+              <img src="EN.jpg" alt="TradeSizer Promo" class="project-image">
+              <a href="https://www.youtube.com/watch?v=zZDh7ZoDMdc" target="_blank" class="video-link">
+                🎬 Смотреть рекламное видео для Google Play
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<p>
-Stack: Flutter, Riverpod, Firebase
-</p>
+      <div class="accordion-item">
+        <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
+          ▶ 🏠 Pull Sky
+        </button>
+        <div class="accordion-content">
+          <div class="video-side">
+            <video src="videos/video_3.mp4" controls muted playsinline></video>
+          </div>
+          <div class="text-side">
+            <h3>Pull Sky</h3>
+            <p class="project-desc">Магазин по продаже натяжных потолков. Участие в разработке, помощь в доделке проекта.</p>
+            <div class="tech-stack">
+              <span class="tech-label">Стек:</span>
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Cubit</span>
+              <span class="tech-tag">SharedPreferences</span>
+              <span class="tech-tag">REST API</span>
+              <span class="tech-tag">Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<video controls width="100%">
-<source src="videos/tradesizer.mp4" type="video/mp4">
-</video>
+      <div class="accordion-item">
+        <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
+          ▶ 🧮 Калькулятор
+        </button>
+        <div class="accordion-content">
+          <div class="video-side">
+            <video src="videos/video_4.mp4" controls muted playsinline></video>
+          </div>
+          <div class="text-side">
+            <h3>Калькулятор</h3>
+            <p class="project-desc">Пробный, один из первых проектов. Подключение стороннего API погоды, работа с базой данных.</p>
+            <div class="tech-stack">
+              <span class="tech-label">Стек:</span>
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Cubit/BLoC</span>
+              <span class="tech-tag">SharedPreferences</span>
+              <span class="tech-tag">Weather API</span>
+              <span class="tech-tag">SQLite</span>
+            </div>
+            <p class="project-note">Локальная регистрация и авторизация пользователя.</p>
+          </div>
+        </div>
+      </div>
 
-</div>
-</div>
+      <div class="accordion-item">
+        <button class="accordion-button" onclick="this.parentElement.classList.toggle('active')">
+          ▶ 👽 Rick and Morty
+        </button>
+        <div class="accordion-content">
+          <div class="video-side">
+            <video src="videos/video_5.mp4" controls muted playsinline></video>
+          </div>
+          <div class="text-side">
+            <h3>Rick and Morty</h3>
+            <p class="project-desc">Приложение с информацией о персонажах из сериала «Рик и Морти». Загрузка списков, кеширование данных, реализован поиск.</p>
+            <div class="tech-stack">
+              <span class="tech-label">Стек:</span>
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">BLoC</span>
+              <span class="tech-tag">Rick and Morty API</span>
+              <span class="tech-tag">Dio</span>
+              <span class="tech-tag">Cache</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="card" onclick="toggle('app2')">
-<h3>Crypto Portfolio App</h3>
+    <section class="contact-section">
+      <h2>📬 Связаться со мной</h2>
+      <div class="contact-links">
+        <a href="mailto:andryuprog@gmail.com" class="contact-btn">
+          ✉️ andryuprog@gmail.com
+        </a>
+        <a href="https://t.me/andryuprog" target="_blank" class="contact-btn telegram">
+          ️ @andryuprog
+        </a>
+      </div>
+    </section>
 
-<div id="app2" class="project-content" style="display:none">
-
-<p>
-Mobile application for tracking crypto portfolio and market statistics.
-</p>
-
-<p>
-Stack: Flutter, REST API, Firebase
-</p>
-
-<video controls width="100%">
-<source src="videos/portfolio.mp4" type="video/mp4">
-</video>
-
-</div>
-</div>
-
-<div class="footer">
-Contact: <a href="mailto:support@programingstudio.com">support@programingstudio.com</a>
-</div>
-
-</div>
-
+    <div class="footer">
+      © 2025 Flutter Developer Portfolio. All rights reserved.
+    </div>
+  </div>
 </body>
 </html>
